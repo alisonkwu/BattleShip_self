@@ -1,0 +1,47 @@
+2/3
+
+
+Problem Solving - state what you want to do first. What's supposed to happen?
+- do something until something happens --> while loop
+- do something for each of these things --> for loop
+
+- something has something else --> declare board within player (battleship) 
+- something is something else --> inheritance.
+
+-ex: TicTacToe
+ - in main.py --> 2 function cals that create the game & play the game
+	- battleship should look similar 
+
+Battleship 
+- player should place the ships on the board for ALL the ships 
+
+
+# place ships 
+# for each ship we have, place that ship
+
+Def place_ships(...):
+	for ship in self.ships: 
+		self.place(ship)
+
+Def place_ship(...): 
+	while True:
+		try: 
+			ship_placement = self.get_ship_placement()
+			self.board.add_ship(ship_placement)
+			return
+		except:
+			... #yell at player
+	
+
+*you can create study groups just don't look at any code
+
+Back to INHERITANCE
+
+- Method resolution order: established starting at first class & all the way up its inheritance hierarchy before going to the next class
+- cooperative multi-inheritance..complicated so must know you will be doing this beforehand
+
+
+Writing AI for TicTacToe
+
+
+

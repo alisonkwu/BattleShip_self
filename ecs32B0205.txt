@@ -1,0 +1,51 @@
+2/5 
+
+import random 
+random.seed(5) #useful for debugging so same results to check.
+a = [random.randint(3, 1000) for _ in range(10)]
+a 
+[640, 264, 762, 370, 817, 710, 968, 864, 760, 670] # list of random #s produced
+
+random.seed(5)
+b = [random.randint(3, 1000) for _ in range(10)]
+b
+[640, 264, 762, 370, 817, 710, 968, 864, 760, 670] # same numbers are produced
+
+
+RECURSION
+
+- different method of problem solving 
+- if it is defined in terms of itself 
+	- ex: ancestor. Someone is my ancestor if they are the ancestor of my parents
+
+Def ancestor(x,y)
+	if parent(x,y)
+		return True
+	elif ancestor(x, father(y)): 
+		return True
+	elif ancestor(x, mother(y)):
+		return true
+	else: 
+		return False
+
+Base case: the ones that you can solve right away 
+- ex: parent is your ancestor
+- should be checked first to prevent infinite recursion
+- many times base cases have to do with having nothing left
+	- empty string, list, dict
+
+Recursive Case: where you call your function again 
+- when you believe ur functions solves the problem
+- must get at least one step closer to the base case (behaved recursion)
+- many recursive problems use first rest recursion 
+	- take out the first element & recurse on the rest 
+	- combine the recursion result with the 1st element
+- common problem: Fibonacci sequence 
+	fib(0) = 1, fib (1) = 1, fib(n) = fib(n-1) + fib(n-2)
+	in code:
+	def fib(n):
+		if n == 0 or n == 1:
+			return 1
+		else: 
+			return fib(n-1) + fib(n-2)
+
